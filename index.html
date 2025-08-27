@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Todo-List</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <header>
+        <div class="container-row">
+          <div class="greetings">
+            <h2>Hello Myra, <span class="highlight">Good Afternoon !</span></h2>
+          </div>
+          <div class="toggle-buttons">
+            <i class="ri-sun-fill light-icon"></i>
+            <!-- <i class="ri-moon-fill"></i> -->
+          </div>
+        </div>
+      </header>
+
+      <!-- Main -->
+      <main class="main-content">
+        <!-- Toolbar Row -->
+        <section class="controls container-row">
+          <!-- Left: Filter Buttons -->
+          <nav class="filter-buttons">
+  <button type="button" class="filter-btn"><span class="btn-text">All</span></button>
+  <button type="button" class="filter-btn"><span class="btn-text">Completed</span></button>
+  <button type="button" class="filter-btn"><span class="btn-text">Pending</span></button>
+</nav>
+
+          <!-- Right: Date + Time -->
+          <time class="datetime"> August 26, 2025 - 2:30 PM </time>
+        </section>
+
+        
+  <!-- ✅ Parent container for todos -->
+ <div class="todolist-container">
+
+            <div class="day-section" data-day="Monday">
+                <div class="day-header">MONDAY</div>
+                <ul class="task-list">
+                </ul>
+                <input type="text" class="user-input" placeholder="Add new tasks...">
+            </div>
+
+            <div class="day-section" data-day="Tuesday">
+                <div class="day-header">TUESDAY</div>
+                <ul class="task-list">
+                </ul>
+                <input type="text" class="user-input" placeholder="Add new tasks...">
+            </div>
+
+            <div class="day-section" data-day="Wednesday">
+                <div class="day-header">WEDNESDAY</div>
+                <ul class="task-list">
+                </ul>
+                <input type="text" class="user-input" placeholder="Add new tasks...">
+            </div>
+
+            <div class="day-section" data-day="Thursday">
+                <div class="day-header">THURSDAY</div>
+                <ul class="task-list">
+                </ul>
+                <input type="text" class="user-input" placeholder="Add new tasks...">
+            </div>
+
+            <div class="day-section" data-day="Friday">
+                <div class="day-header">FRIDAY</div>
+                <ul class="task-list">
+                </ul>
+                <input type="text" class="user-input" placeholder="Add new tasks...">
+            </div>
+
+            <div class="day-section" data-day="Saturday">
+                <div class="day-header">SATURDAY</div>
+                <ul class="task-list">
+                </ul>
+                <input type="text" class="user-input" placeholder="Add new tasks...">
+            </div>
+
+            <div class="day-section" data-day="Sunday">
+                <div class="day-header">SUNDAY</div>
+                <ul class="task-list">
+                </ul>
+                <input type="text" class="user-input" placeholder="Add new tasks...">
+            </div>
+
+           
+
+
+          
+        </div>
+
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

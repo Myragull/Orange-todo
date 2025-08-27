@@ -1,5 +1,7 @@
 const allInputs = document.querySelectorAll('.user-input');
 
+
+
 let todoData = {
   Monday: [],
   Tuesday: [],
@@ -39,7 +41,7 @@ function renderTasks(day) {
     li.classList.add('task-item');
     li.innerHTML = `
       <div class="task-content">
-        <div class="task-checkbox"></div>
+            <input type="checkbox" class="task-checkbox">
         <span class="task-text">${taskText}</span>
       </div>
       <div class="task-actions">
@@ -137,6 +139,13 @@ filterButtons.forEach(btn => {
     // add active class to clicked one
     btn.classList.add("active");
   });
+});
+
+document.addEventListener("change", (e) => {
+  if (e.target.classList.contains("task-checkbox")) {
+    const taskItem = e.target.closest(".task-item");
+    taskItem.classList.toggle("completed", e.target.checked);
+  }
 });
 
 

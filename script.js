@@ -127,4 +127,26 @@ document.querySelectorAll('.day-header').forEach(header => {
 });
 
 
+// select all filter buttons
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    // remove active class from all
+    filterButtons.forEach(b => b.classList.remove("active"));
+    // add active class to clicked one
+    btn.classList.add("active");
+  });
+});
+
+
+function loaderAnimation() {
+    var loader = document.querySelector("#loader")
+    setTimeout(function () {
+        loader.style.top = "-100%"
+    }, 4200)
+}
+
+// loaderAnimation()
+
 

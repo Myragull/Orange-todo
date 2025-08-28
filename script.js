@@ -1,5 +1,57 @@
 const allInputs = document.querySelectorAll('.user-input');
 
+var crsr = document.querySelector("#cursor");
+var blur = document.querySelector("#cursor-blur");
+
+document.addEventListener("mousemove", function (dets) {
+  crsr.style.left = dets.x + "px";
+  crsr.style.top = dets.y + "px";
+  blur.style.left = dets.x - 250 + "px";
+  blur.style.top = dets.y - 250 + "px";
+});
+
+
+const toggleBtn = document.getElementById("toggle-btn");
+const savedTheme = localStorage.getItem("theme");
+
+// Apply saved theme on load
+document.body.classList.toggle("dark-theme", savedTheme === "dark-theme");
+toggleBtn.className = savedTheme === "dark-theme" ? "ri-moon-line" : "ri-sun-line";
+
+// Toggle theme on click
+toggleBtn.addEventListener("click", () => {
+  const isDark = document.body.classList.toggle("dark-theme");
+  localStorage.setItem("theme", isDark ? "dark-theme" : "light-theme");
+  toggleBtn.className = isDark ? "ri-moon-line" : "ri-sun-line";
+});
+
+
+
+// // 1. Get toggle button
+// const themeToggle = document.querySelector(".toggle-buttons");
+
+// // 2. Load saved theme
+// const savedTheme = localStorage.getItem("theme");
+// if (savedTheme) {
+//   document.body.classList.add(savedTheme);
+// }
+
+// // 3. Toggle theme on click
+// themeToggle.addEventListener("click", () => {
+//   if (document.body.classList.contains("dark-theme")) {
+//     // Switch to light
+//     document.body.classList.remove("dark-theme");
+//     document.body.classList.add("light-theme");
+//     localStorage.setItem("theme", "light-theme");
+//   } else {
+//     // Switch to dark
+//     document.body.classList.remove("light-theme");
+//     document.body.classList.add("dark-theme");
+//     localStorage.setItem("theme", "dark-theme");
+//   }
+// });
+
+
 
 
 let todoData = {
@@ -156,6 +208,6 @@ function loaderAnimation() {
     }, 4200)
 }
 
-// loaderAnimation()
+loaderAnimation()
 
 

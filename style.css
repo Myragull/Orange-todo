@@ -18,12 +18,12 @@ body {
 
 /* DARK THEME */
 body.dark-theme {
-  background-color: #3A3A3A;
-  color: #A6A3A3;
+  background-color: #3a3a3a;
+  color: #a6a3a3;
 }
 
- body.dark-theme .day-section {
-  color: #3C3C3C;
+body.dark-theme .day-section {
+  color: #3c3c3c;
 }
 
 body.dark-theme .filter-btn {
@@ -37,10 +37,9 @@ body.dark-theme .filter-btn .btn-text {
 
 body.dark-theme .filter-btn::after {
   background-color: #a3a3a3;
- 
 }
 
- body.dark-theme .filter-btn:hover .btn-text {
+body.dark-theme .filter-btn:hover .btn-text {
   color: #000000bb;
 }
 
@@ -55,7 +54,7 @@ body.dark-theme .filter-btn.active .btn-text {
 
 body.dark-theme .todo-content {
   box-shadow: 0 0 8px #a3a3a36d;
-  border: 1px solid#a3a3a3 ;
+  border: 1px solid#a3a3a3;
 }
 
 body.dark-theme .todo-inner {
@@ -63,7 +62,7 @@ body.dark-theme .todo-inner {
 }
 
 body.dark-theme .day-section {
-  color: #D2D2D2;
+  color: #d2d2d2;
 }
 
 body.dark-theme .task-item {
@@ -71,9 +70,8 @@ body.dark-theme .task-item {
 }
 
 body.dark-theme .task-checkbox {
-
   border: 0.1125rem solid #a3a3a3;
-  background-color: #3C3C3C;
+  background-color: #3c3c3c;
 }
 
 body.dark-theme .task-checkbox:checked {
@@ -82,11 +80,11 @@ body.dark-theme .task-checkbox:checked {
 }
 
 body.dark-theme .task-item.completed .task-text {
-  color: #606060; 
+  color: #606060;
 }
 
 body.dark-theme .user-input {
-  background-color: #3A3A3A;
+  background-color: #3a3a3a;
   color: #a3a3a3;
 }
 
@@ -99,7 +97,6 @@ body.dark-theme #loader {
   background-color: #d4d4d4;
 }
 
-
 #cursor {
   height: 20px;
   width: 20px;
@@ -108,8 +105,7 @@ body.dark-theme #loader {
   position: fixed;
   z-index: 99;
   transition: all linear 0.1s;
-   pointer-events: none;
-
+  pointer-events: none;
 }
 #cursor-blur {
   height: 400px;
@@ -132,6 +128,8 @@ body.dark-theme #loader {
 }
 
 header {
+  background: #d4d4d4;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -161,7 +159,7 @@ header {
 }
 
 #toggle-btn {
-  font-size: 1.6rem;      
+  font-size: 1.6rem;
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -171,17 +169,15 @@ header {
 }
 
 .ri-moon-line {
-  color: #b5b4b4;  
+  color: #b5b4b4;
 }
 
 #toggle-btn:hover {
   transform: rotate(20deg) scale(1.1);
 }
 
-
 .controls {
   padding: 1em 0;
-
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -196,6 +192,7 @@ header {
 }
 
 .filter-btn {
+  margin-top: 0.4em;
   padding: 0.5em 1.1em;
   background: #d4d4d4;
   border: 1px solid #0000003c;
@@ -244,7 +241,7 @@ header {
 }
 
 .datetime {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 
 .todolist-container {
@@ -255,7 +252,6 @@ header {
 .todo-content {
   overflow: hidden;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
-
   border: 1px solid #0000003c;
   border-radius: 30px;
 }
@@ -266,18 +262,18 @@ header {
 }
 
 .day-section {
-  color: #3C3C3C;
-  padding: 1em 0;
+  color: #3c3c3c;
+  padding: 2em 0;
   letter-spacing: -0.7px;
 }
 
 .day-header {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 1000;
 }
 
 .task-list {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 300;
   list-style: none;
   /* border: 1px solid red; */
@@ -361,6 +357,11 @@ header {
   opacity: 0.3; /* fade buttons */
   transition: opacity 0.3s ease;
 }
+.task-actions {
+  display: flex;
+  gap: 0.7rem;
+  font-size: 1.2rem;
+}
 
 .user-input {
   background: #d4d4d4;
@@ -385,38 +386,6 @@ header {
   padding: 0;
 }
 
-/*  700px */
-@media (min-width: 43.75em) {
-  .filter-btn {
-    font-size: 0.9rem;
-  }
-
-  .datetime {
-    font-size: 0.8rem;
-  }
-
-  #toggle-btn {
-  font-size: 1.6rem;      
-  cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-  .day-section {
-    font-size: 1.9rem;
-  }
-
-  .logo {
-    width: 56px;
-    height: 56px;
-  }
-}
-
-/* 1000px */
-@media (min-width: 62.5em) {
-  .container-row {
-    padding: 0 2em;
-  }
-}
 
 /* Initially, days are collapsed */
 .day-section .task-list,
@@ -480,5 +449,46 @@ header {
 @media (max-width: 600px) {
   #loader h1 {
     font-size: 9vw;
+  }
+}
+
+/*  700px */
+@media (min-width: 43.75em) {
+  .filter-btn {
+    font-size: 0.9rem;
+  }
+
+  .datetime {
+    font-size: 1rem;
+  }
+
+  #toggle-btn {
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .day-header {
+    font-size: 1.7rem;
+  }
+
+  .task-list {
+    font-size: 1.2rem;
+  }
+
+  .task-actions {
+    font-size: 1.3rem;
+  }
+
+  .logo {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+/* 1000px */
+@media (min-width: 62.5em) {
+  .container-row {
+    padding: 0 2em;
   }
 }

@@ -190,7 +190,7 @@ header {
 }
 
 .filter-btn {
-  margin-top: 0.4em;
+  margin-top: 0.2em;
   padding: 0.5em 1.1em;
   background: #d4d4d4;
   border: 1px solid #0000003c;
@@ -453,6 +453,8 @@ header {
 @media (min-width: 43.75em) {
   .filter-btn {
     font-size: 0.9rem;
+  margin-top: 0.4em;
+
   }
 
   .datetime {

@@ -1,14 +1,14 @@
 const allInputs = document.querySelectorAll('.user-input');
 
-var crsr = document.querySelector("#cursor");
-var blur = document.querySelector("#cursor-blur");
+// var crsr = document.querySelector("#cursor");
+// var blur = document.querySelector("#cursor-blur");
 
-document.addEventListener("mousemove", function (dets) {
-  crsr.style.left = dets.x + "px";
-  crsr.style.top = dets.y + "px";
-  blur.style.left = dets.x - 250 + "px";
-  blur.style.top = dets.y - 250 + "px";
-});
+// document.addEventListener("mousemove", function (dets) {
+//   crsr.style.left = dets.x + "px";
+//   crsr.style.top = dets.y + "px";
+//   blur.style.left = dets.x - 250 + "px";
+//   blur.style.top = dets.y - 250 + "px";
+// });
 
 
 const toggleBtn = document.getElementById("toggle-btn");
@@ -208,6 +208,6 @@ function loaderAnimation() {
     }, 4200)
 }
 
-loaderAnimation()
+// loaderAnimation()
 
 

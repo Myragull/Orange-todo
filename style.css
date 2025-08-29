@@ -129,7 +129,6 @@ body.dark-theme #loader {
 
 header {
   background: #d4d4d4;
-  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -385,7 +384,6 @@ header {
   min-width: 0;
   padding: 0;
 }
-
 
 /* Initially, days are collapsed */
 .day-section .task-list,
